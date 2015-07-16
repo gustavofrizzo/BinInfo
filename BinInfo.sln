@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinInfo", "BinInfo\BinInfo.csproj", "{B404EE62-B790-4EEA-A5BD-A913322A20CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinInfoUnitTest", "BinInfoUnitTest\BinInfoUnitTest.csproj", "{44ED7D47-B08C-41C5-B406-2B9158412E96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B404EE62-B790-4EEA-A5BD-A913322A20CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B404EE62-B790-4EEA-A5BD-A913322A20CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B404EE62-B790-4EEA-A5BD-A913322A20CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44ED7D47-B08C-41C5-B406-2B9158412E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44ED7D47-B08C-41C5-B406-2B9158412E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44ED7D47-B08C-41C5-B406-2B9158412E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44ED7D47-B08C-41C5-B406-2B9158412E96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
