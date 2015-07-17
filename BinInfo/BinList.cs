@@ -41,7 +41,7 @@ namespace BinInfo
                 }
                 catch (WebException ex)
                 {
-                    String addInfo = String.Format("No results for {0}. Make sure you enter a valid BIN/IIN number. \n", bin);
+                    String addInfo = String.Format("No results for {0}. Make sure you enter a valid BIN/IIN number. --- ", bin);
                     throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
                 }
                 catch (Exception)
