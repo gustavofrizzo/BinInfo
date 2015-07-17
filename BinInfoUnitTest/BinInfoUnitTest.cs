@@ -23,5 +23,19 @@ namespace BinInfoUnitTest
             Assert.AreEqual("", info.SubBrand);
             Assert.AreEqual("", info.CardCategory);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void ArgumentNullException_BinListTest()
+        {
+            var info = BinList.Find(null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ArgumentException_BinListTest()
+        {
+            var info = BinList.Find("333g12");
+        }
     }
 }
