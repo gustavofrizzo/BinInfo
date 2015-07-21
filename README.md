@@ -1,6 +1,6 @@
 # BinInfo 
 
-BinInfo gets information about Credit Cards Issuers through [binlist.net](http://binlist.net) public REST API.
+BinInfo gets information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
 
 ## About [binlist.net](http://binlist.net)
 
