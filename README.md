@@ -2,6 +2,8 @@
 
 BinInfo gets information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
 
+NuGet Package -> https://www.nuget.org/packages/BinInfo
+
 ## About [binlist.net](http://binlist.net)
 
 [binlist.net](http://binlist.net) is a public web service for searching Issuer Identification Numbers (IIN).
