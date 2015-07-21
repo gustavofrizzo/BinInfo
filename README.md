@@ -13,7 +13,7 @@ This webservice has an internal database with IIN/BIN information, which is quer
 ## Usage
 
 ```C#
-IssuerInformation info = BinList.Find("431940"); // The first 6 digits of a credit card number.
+IssuerInformation info = BinList.Find("431940"); // First 6 digits of a credit card number.
 
 info.Bin; // => "431940"
 info.Brand; // => "VISA"
