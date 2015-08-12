@@ -17,48 +17,48 @@ namespace BinInfo
         /// BIN/IIN number.
         /// </summary>
         [DataMember(Name = "bin")]
-        public String Bin { get; set; }
+        public string Bin { get; set; }
 
         /// <summary>
         /// Card brand.
         /// </summary>
         [DataMember(Name = "brand")]
-        public String Brand { get; set; }
+        public string Brand { get; set; }
 
         [DataMember(Name = "sub_brand")]
-        public String SubBrand { get; set; }
+        public string SubBrand { get; set; }
 
         /// <summary>
         /// Country Code (ISO3166-1)
         /// </summary>
         [DataMember(Name = "country_code")]
-        public String CountryCode { get; set; }
+        public string CountryCode { get; set; }
 
         [DataMember(Name = "country_name")]
-        public String CountryName { get; set; }
+        public string CountryName { get; set; }
 
         [DataMember(Name = "bank")]
-        public String Bank { get; set; }
+        public string Bank { get; set; }
 
         /// <summary>
         /// Card types like Debit, Crecit, Prepaid an so on.
         /// </summary>
         [DataMember(Name = "card_type")]
-        public String CardType { get; set; }
+        public string CardType { get; set; }
 
         /// <summary>
         /// Categories like Standard, Classic, Platinum, Premier and so on.
         /// </summary>
         [DataMember(Name = "card_category")]
-        public String CardCategory { get; set; }
+        public string CardCategory { get; set; }
 
         [DataMember(Name = "latitude")]
-        public String Latitude { get; set; }
+        public string Latitude { get; set; }
 
         [DataMember(Name = "longitude")]
-        public String Longitude { get; set; }
+        public string Longitude { get; set; }
 
         [DataMember(Name = "query_time")]
-        public String QueryTime { get; set; }
+        public string QueryTime { get; set; }
     }
 }
