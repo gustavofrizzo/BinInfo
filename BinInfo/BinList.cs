@@ -18,7 +18,7 @@ namespace BinInfo
         /// <exception cref="System.ArgumentException"></exception>
         /// <exception cref="System.ArgumentNullException"></exception>
         /// <returns>IssuerInformation</returns>
-        public static IssuerInformation Find(String bin)
+        public static IssuerInformation Find(string bin)
         {
             if (bin == null)
                 throw new ArgumentNullException();
@@ -30,7 +30,7 @@ namespace BinInfo
             {
                 try
                 {
-                    String json = web.DownloadString("http://www.binlist.net/json/" + bin);
+                    string json = web.DownloadString("http://www.binlist.net/json/" + bin);
 
                     DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
 
@@ -41,7 +41,7 @@ namespace BinInfo
                 }
                 catch (WebException ex)
                 {
-                    String addInfo = String.Format("No results for {0}. Make sure you enter a valid BIN/IIN number. --- ", bin);
+                    string addInfo = string.Format("No results for {0}. Make sure you enter a valid BIN/IIN number. --- ", bin);
                     throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
                 }
                 catch (Exception)
