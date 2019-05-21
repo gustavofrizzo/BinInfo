@@ -41,7 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinList.cs" />
-    <Compile Include="IssuerInformation.cs" />
+    <Compile Include="Models\BankInformation.cs" />
+    <Compile Include="Models\CardNumberInformation.cs" />
+    <Compile Include="Models\CardOriginInformation.cs" />
+    <Compile Include="Models\IssuerInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
