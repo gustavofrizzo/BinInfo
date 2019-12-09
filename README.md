@@ -17,17 +17,16 @@ This webservice has an internal database with IIN/BIN information, which is quer
 ```C#
 IssuerInformation info = BinList.Find("431940"); // First 6 digits of a credit card number.
 
-info.Bin; // => "431940"
 info.Brand; // => "VISA"
-info.CountryCode; // => "IE"
-info.CountryName; // => "Ireland"
-info.Bank; // => "BANK OF IRELAND"
+info.Country.Alpha2; // => "IE"
+info.Country.Name; // => "Ireland"
+info.Bank.Name; // => "BANK OF IRELAND"
 info.CardType; // => "DEBIT"
-info.Latitude; // => "53"
-info.Longitude; // => "-8"
-info.SubBrand; // => ""
-info.CardCategory; // => ""
-info.QueryTime; // => "226.125µs"
+info.Country.Latitude; // => "53"
+info.Country.Longitude; // => "-8"
+info.Brand; // => "Traditional"
+info.Prepaid; // => false
+
 ```
 
 ## Limits
