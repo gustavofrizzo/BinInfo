@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using BinInfo.Models;
 
 namespace BinInfo
 {
@@ -30,7 +31,7 @@ namespace BinInfo
             {
                 try
                 {
-                    string json = web.DownloadString("http://www.binlist.net/json/" + bin);
+                    string json = web.DownloadString("https://lookup.binlist.net/" + bin);
 
                     DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
 
