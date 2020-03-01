@@ -36,7 +36,7 @@ namespace BinInfo
                     DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
 
                     var issuerInfo =
-                        (IssuerInformation)serializer.ReadObject(new MemoryStream(Encoding.Default.GetBytes(json)));
+                        (IssuerInformation)serializer.ReadObject(new MemoryStream(Encoding.UTF8.GetBytes(json)));
 
                     return issuerInfo;
                 }
@@ -51,6 +51,5 @@ namespace BinInfo
                 }
             }
         }
-
     }
 }
