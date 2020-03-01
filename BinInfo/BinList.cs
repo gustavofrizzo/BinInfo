@@ -25,7 +25,7 @@ namespace BinInfo
                 throw new ArgumentNullException();
 
             if (!bin.Trim().All(c => char.IsNumber(c)))
-                throw new ArgumentException("Make sure you enter a valid BIN/IIN number.");
+                throw new ArgumentException("Make sure to enter a valid BIN/IIN number.");
 
             using (WebClient web = new WebClient())
             {
@@ -42,7 +42,7 @@ namespace BinInfo
                 }
                 catch (WebException ex)
                 {
-                    string addInfo = string.Format("No results for {0}. Make sure you enter a valid BIN/IIN number. --- ", bin);
+                    string addInfo = $"No results for {bin}. Make sure you enter a valid BIN/IIN number. --- ";
                     throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
                 }
                 catch (Exception)
