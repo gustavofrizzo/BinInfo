@@ -31,7 +31,8 @@
     <RepositoryUrl>https://github.com/gustavofrizzo/BinInfo</RepositoryUrl>
     <PackageTags>binlist.net Credit Card Issuers BIN IIN Bank Identification Number Issuer Numbers</PackageTags>
     <PackageReleaseNotes>
-      
+      -- Adding support to .NET Standard 2.0
+      -- Adding BinList.FindAsync(string bin) method.
     </PackageReleaseNotes>
   </PropertyGroup>
 
