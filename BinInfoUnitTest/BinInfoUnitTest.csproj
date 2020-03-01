@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BinInfo\BinInfo.csproj">
-      <Project>{b404ee62-b790-4eea-a5bd-a913322a20cc}</Project>
+      <Project>{63a04a8c-93b6-46b1-af84-e5ff5227043e}</Project>
       <Name>BinInfo</Name>
     </ProjectReference>
   </ItemGroup>
