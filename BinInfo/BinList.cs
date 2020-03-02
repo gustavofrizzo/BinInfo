@@ -38,9 +38,11 @@ namespace BinInfo
 
                     DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
 
-                    var issuerInfo = (IssuerInformation)serializer.ReadObject(new MemoryStream(Encoding.UTF8.GetBytes(json)));
-
-                    return issuerInfo;
+                    using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
+                    {
+                        var issuerInfo = (IssuerInformation)serializer.ReadObject(stream);
+                        return issuerInfo;
+                    }
                 }
                 catch (WebException ex)
                 {
@@ -71,9 +73,11 @@ namespace BinInfo
 
                     DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
 
-                    var issuerInfo = (IssuerInformation)serializer.ReadObject(new MemoryStream(Encoding.UTF8.GetBytes(json)));
-                    
-                    return issuerInfo;
+                    using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
+                    {
+                        var issuerInfo = (IssuerInformation)serializer.ReadObject(stream);
+                        return issuerInfo;
+                    }
                 }
                 catch (WebException ex)
                 {
