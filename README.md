@@ -31,4 +31,4 @@ info.Prepaid; // => false
 
 ## Limits
 
-Due to the high volume of queries binlist.net implemented a throttling mechanism, which allows at most 10,000 queries per hour. After reaching this hourly quota, all your requests result in HTTP 403 (Forbidden) until it clears up on the next roll over.
+Requests are throttled at 10 per minute with a burst allowance of 10. If you hit the speed limit the service will return a 429 http status code.
