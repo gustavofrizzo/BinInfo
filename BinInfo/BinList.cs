@@ -18,16 +18,16 @@ namespace BinInfo
         /// <para>This webservice has an internal database with IIN/BIN information.</para>
         /// </summary>
         /// <param name="bin">The first 6 digits of a credit card number.</param>
-        /// <exception cref="System.Net.WebException"></exception>
-        /// <exception cref="System.ArgumentException"></exception>
-        /// <exception cref="System.ArgumentNullException"></exception>
+        /// <exception cref="WebException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns>IssuerInformation</returns>
         public static IssuerInformation Find(string bin)
         {
             if (bin == null)
-                throw new ArgumentNullException();
+                throw new ArgumentNullException("bin");
 
-            if (!bin.Trim().All(c => char.IsNumber(c)))
+            if (!bin.Trim().All(c => char.IsNumber(c)) || string.IsNullOrWhiteSpace(bin))
                 throw new ArgumentException("Make sure to enter a valid BIN/IIN number.");
 
             using (WebClient web = new WebClient())
@@ -49,20 +49,26 @@ namespace BinInfo
                     string addInfo = $"No results for {bin}. Make sure you enter a valid BIN/IIN number. --- ";
                     throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
                 }
-                catch (Exception)
-                {
-                    throw;
-                }
             }
         }
 
 #if !NET40
+
+        /// <summary>
+        /// binlist.net is a public web service for searching Issuer Identification Numbers (IIN).
+        /// <para>This webservice has an internal database with IIN/BIN information.</para>
+        /// </summary>
+        /// <param name="bin">The first 6 digits of a credit card number.</param>
+        /// <exception cref="WebException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>IssuerInformation</returns>
         public async static Task<IssuerInformation> FindAsync(string bin)
         {
             if (bin == null)
-                throw new ArgumentNullException();
+                throw new ArgumentNullException("bin");
 
-            if (!bin.Trim().All(c => char.IsNumber(c)))
+            if (!bin.Trim().All(c => char.IsNumber(c)) || string.IsNullOrWhiteSpace(bin))
                 throw new ArgumentException("Make sure to enter a valid BIN/IIN number.");
 
             using (WebClient web = new WebClient())
@@ -83,10 +89,6 @@ namespace BinInfo
                 {
                     string addInfo = $"No results for {bin}. Make sure you enter a valid BIN/IIN number. --- ";
                     throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
-                }
-                catch (Exception)
-                {
-                    throw;
                 }
             }
         }

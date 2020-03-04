@@ -7,7 +7,7 @@ namespace BinInfo.Tests
     public class BinListTests
     {
         [Fact]
-        public void Find_BinListTest()
+        public void Find_BinList_Test()
         {
             IssuerInformation info = BinList.Find("431940");
 
@@ -23,7 +23,7 @@ namespace BinInfo.Tests
         }
 
         [Fact]
-        public async void Find_BinListTestAsync()
+        public async void Find_BinList_Async_Test()
         {
             IssuerInformation info = await BinList.FindAsync("431940");
 
@@ -39,15 +39,39 @@ namespace BinInfo.Tests
         }
 
         [Fact]
-        public void ArgumentNullException_BinListTest()
+        public void ArgumentNullException_BinList_Test()
         {
             Assert.Throws<ArgumentNullException>(() => BinList.Find(null));
         }
 
         [Fact]
-        public void ArgumentException_BinListTest()
+        public void ArgumentException_BinList_Test()
         {
             Assert.Throws<ArgumentException>(() => BinList.Find("333g12"));
+        }
+
+        [Fact]
+        public void ArgumentException_BinList_Empty_Test()
+        {
+            Assert.Throws<ArgumentException>(() => BinList.Find(""));
+        }
+
+        [Fact]
+        public async void ArgumentNullException_BinList_Async_Test()
+        {
+            await Assert.ThrowsAsync<ArgumentNullException>(() => BinList.FindAsync(null));
+        }
+
+        [Fact]
+        public async void ArgumentException_BinList_Async_Test()
+        {
+            await Assert.ThrowsAsync<ArgumentException>(() => BinList.FindAsync("333g12"));
+        }
+
+        [Fact]
+        public async void ArgumentException_BinList_Empty_Async_Test()
+        {
+            await Assert.ThrowsAsync<ArgumentException>(() => BinList.FindAsync(""));
         }
     }
 }
