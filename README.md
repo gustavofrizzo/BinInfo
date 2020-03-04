@@ -31,4 +31,4 @@ info.Prepaid; // => false
 
 ## Limits
 
-Requests are throttled at 10 per minute with a burst allowance of 10. If you hit the speed limit the service will return a 429 http status code.
+Requests are throttled at 10 per minute with a burst allowance of 10. If you hit the speed limit the service will return a 429 http status code. (More info: https://binlist.net/)
