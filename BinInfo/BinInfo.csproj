@@ -6,9 +6,9 @@
     <RootNamespace>BinInfo</RootNamespace>
     <PackageId>BinInfo</PackageId>
     <Product>BinInfo</Product>
-    <Version>2.0.1</Version>
-    <FileVersion>2.0.1.0</FileVersion>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <Version>2.0.2</Version>
+    <FileVersion>2.0.2.0</FileVersion>
+    <AssemblyVersion>2.0.2.0</AssemblyVersion>
     <title>BinInfo</title>
     <Copyright>Copyright © Gustavo Frizzo 2020</Copyright>
     <Description>

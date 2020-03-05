@@ -11,7 +11,7 @@ namespace BinInfo
 {
     public static class BinList
     {
-        private const string BaseUrl = "https://lookup.binlist.net/";
+        private static readonly string BaseUrl = "https://lookup.binlist.net/";
 
         /// <summary>
         /// binlist.net is a public web service for searching Issuer Identification Numbers (IIN).

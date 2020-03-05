@@ -11,7 +11,7 @@ namespace BinInfo.Models
         /// <summary>
         /// Length of the card number
         /// </summary>
-        [DataMember(Name = "number")]
+        [DataMember(Name = "length")]
         public int Length { get; set; }
 
         /// <summary>

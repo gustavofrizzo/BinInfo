@@ -19,6 +19,8 @@ namespace BinInfo.Tests
             Assert.Equal("53", info.Country.Latitude);
             Assert.Equal("-8", info.Country.Longitude);
             Assert.Equal("Traditional", info.Brand);
+            Assert.Equal(16, info.Number.Length);
+            Assert.True(info.Number.Luhn);
             Assert.False(info.Prepaid);
         }
 
@@ -35,6 +37,8 @@ namespace BinInfo.Tests
             Assert.Equal("53", info.Country.Latitude);
             Assert.Equal("-8", info.Country.Longitude);
             Assert.Equal("Traditional", info.Brand);
+            Assert.Equal(16, info.Number.Length);
+            Assert.True(info.Number.Luhn);
             Assert.False(info.Prepaid);
         }
 
