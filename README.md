@@ -1,4 +1,4 @@
-# BinInfo 
+# BinInfo ![.NET Core](https://github.com/gustavofrizzo/BinInfo/workflows/.NET%20Core/badge.svg?branch=master)
 
 BinInfo gets information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
 
