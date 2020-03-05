@@ -6,9 +6,9 @@
     <RootNamespace>BinInfo</RootNamespace>
     <PackageId>BinInfo</PackageId>
     <Product>BinInfo</Product>
-    <Version>2.0.2</Version>
-    <FileVersion>2.0.2.0</FileVersion>
-    <AssemblyVersion>2.0.2.0</AssemblyVersion>
+    <Version>2.0.3</Version>
+    <FileVersion>2.0.3.0</FileVersion>
+    <AssemblyVersion>2.0.3.0</AssemblyVersion>
     <title>BinInfo</title>
     <Copyright>Copyright © Gustavo Frizzo 2020</Copyright>
     <Description>
@@ -31,8 +31,8 @@
     <RepositoryUrl>https://github.com/gustavofrizzo/BinInfo</RepositoryUrl>
     <PackageTags>binlist.net Credit Card Issuers BIN IIN Bank Identification Number Issuer Numbers</PackageTags>
     <PackageReleaseNotes>
-      -- Adding support to .NET Standard 2.0
-      -- Adding BinList.FindAsync(string bin) method.
+-- Adding support to .NET Standard 2.0
+-- Adding BinList.FindAsync(string bin) method.
     </PackageReleaseNotes>
   </PropertyGroup>
 
