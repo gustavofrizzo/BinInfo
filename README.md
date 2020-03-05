@@ -16,6 +16,8 @@ This webservice has an internal database with IIN/BIN information, which is quer
 
 ```C#
 IssuerInformation info = BinList.Find("431940"); // First 6 digits of a credit card number.
+// OR
+IssuerInformation info = await BinList.FindAsync("431940");
 
 info.Brand; // => "VISA"
 info.Country.Alpha2; // => "IE"
