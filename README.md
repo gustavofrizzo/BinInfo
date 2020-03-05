@@ -1,4 +1,4 @@
-# BinInfo 
+# BinInfo ![.NET Core](https://github.com/gustavofrizzo/BinInfo/workflows/.NET%20Core/badge.svg?branch=master)
 
 BinInfo gets information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
 
@@ -16,6 +16,8 @@ This webservice has an internal database with IIN/BIN information, which is quer
 
 ```C#
 IssuerInformation info = BinList.Find("431940"); // First 6 digits of a credit card number.
+// OR
+IssuerInformation info = await BinList.FindAsync("431940");
 
 info.Brand; // => "VISA"
 info.Country.Alpha2; // => "IE"
@@ -31,4 +33,4 @@ info.Prepaid; // => false
 
 ## Limits
 
-Due to the high volume of queries binlist.net implemented a throttling mechanism, which allows at most 10,000 queries per hour. After reaching this hourly quota, all your requests result in HTTP 403 (Forbidden) until it clears up on the next roll over.
+Requests are throttled at 10 per minute with a burst allowance of 10. If you hit the speed limit the service will return a 429 http status code. (More info: https://binlist.net/)
