@@ -12,16 +12,16 @@
     <title>BinInfo</title>
     <Copyright>Copyright © Gustavo Frizzo 2020</Copyright>
     <Description>
-      BinInfo gets information about Credit Card Issuers through binlist.net public REST API.
+BinInfo gets information about Credit Card Issuers through binlist.net public REST API.
 
-      binlist.net is a public web service for searching Issuer Identification Numbers (IIN).
+binlist.net is a public web service for searching Issuer Identification Numbers (IIN).
 
-      The first 6 digits of a credit card number are known as the Issuer Identification Number (IIN), previously known as Bank Identification Number (BIN). These identify the institution that issued the card to the card holder.
+The first 6 digits of a credit card number are known as the Issuer Identification Number (IIN), previously known as Bank Identification Number (BIN). These identify the institution that issued the card to the card holder.
 
-      This webservice has an internal database with IIN/BIN information, which is queried via the Rest API. There's no magic or tricky calculations, it's just a database. And although the database is very accurate, don't expect it to be perfect.
+This webservice has an internal database with IIN/BIN information, which is queried via the Rest API. There's no magic or tricky calculations, it's just a database. And although the database is very accurate, don't expect it to be perfect.
     </Description>
     <summary>
-      BinInfo gets information about Credit Card Issuers through binlist.net public REST API.
+BinInfo gets information about Credit Card Issuers through binlist.net public REST API.
     </summary>
     <Company />
     <Authors>Gustavo Frizzo and contributors</Authors>
