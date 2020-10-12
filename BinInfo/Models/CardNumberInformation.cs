@@ -19,6 +19,6 @@ namespace BinInfo.Models
         /// against the Luhn algorithm 
         /// </summary>
         [DataMember (Name = "luhn")]
-        public bool Luhn { get; set; }
+        public bool? Luhn { get; set; }
     }
 }

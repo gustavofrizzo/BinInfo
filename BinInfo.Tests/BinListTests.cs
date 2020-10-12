@@ -77,5 +77,22 @@ namespace BinInfo.Tests
         {
             await Assert.ThrowsAsync<ArgumentException>(() => BinList.FindAsync(""));
         }
+
+        [Fact]
+        public void Find_BinList_LuhnIsNull_Test()
+        {
+            IssuerInformation info = BinList.Find("429650");
+
+            Assert.Equal("visa", info.Scheme);
+            Assert.Equal("US", info.Country.Alpha2);
+            Assert.Equal("United States of America", info.Country.Name);
+            Assert.Equal("TWINSTAR C.U.", info.Bank.Name);
+            Assert.Equal("credit", info.CardType);
+            Assert.Equal("38", info.Country.Latitude);
+            Assert.Equal("-97", info.Country.Longitude);
+            Assert.Equal("Traditional", info.Brand);
+            Assert.Equal(16, info.Number.Length);
+            Assert.Null(info.Number.Luhn);
+        }
     }
 }
