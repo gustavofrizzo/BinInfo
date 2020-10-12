@@ -1,8 +1,10 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Diagnostics;
+using System.Runtime.Serialization;
 
 namespace BinInfo.Models
 {
     [DataContract]
+    [DebuggerDisplay("Name: {Name}, Alpha2: {Alpha2}, Currency: {Currency}")]
     public class CardOriginInformation
     {
         [DataMember(Name = "numeric")]

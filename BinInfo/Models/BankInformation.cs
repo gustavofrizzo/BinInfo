@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Diagnostics;
+using System.Runtime.Serialization;
 
 namespace BinInfo.Models
 {
@@ -6,6 +7,7 @@ namespace BinInfo.Models
     /// Brief information about the bank who issued the card
     /// </summary>
     [DataContract]
+    [DebuggerDisplay("Name: {Name}, City: {City}")]
     public class BankInformation
     {
         [DataMember(Name = "name")]

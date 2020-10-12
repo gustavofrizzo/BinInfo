@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Diagnostics;
+using System.Runtime.Serialization;
 
 namespace BinInfo.Models
 {
@@ -6,6 +7,7 @@ namespace BinInfo.Models
     /// Brief details about the card number
     /// </summary>
     [DataContract]
+    [DebuggerDisplay("Length: {Length}, Luhn: {Luhn}")]
     public class CardNumberInformation
     {
         /// <summary>
