@@ -6,9 +6,9 @@
     <RootNamespace>BinInfo</RootNamespace>
     <PackageId>BinInfo</PackageId>
     <Product>BinInfo</Product>
-    <Version>2.0.3</Version>
-    <FileVersion>2.0.3.0</FileVersion>
-    <AssemblyVersion>2.0.3.0</AssemblyVersion>
+    <Version>2.0.4</Version>
+    <FileVersion>2.0.4.0</FileVersion>
+    <AssemblyVersion>2.0.4.0</AssemblyVersion>
     <title>BinInfo</title>
     <Copyright>Copyright © Gustavo Frizzo 2020</Copyright>
     <Description>
@@ -33,6 +33,7 @@
     <PackageReleaseNotes>
 -- Adding support to .NET Standard 2.0
 -- Adding BinList.FindAsync(string bin) method.
+-- Now the property IssuerInformation.Number.Luhn is nullable.
     </PackageReleaseNotes>
   </PropertyGroup>
 
