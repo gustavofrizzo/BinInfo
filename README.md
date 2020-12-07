@@ -1,12 +1,12 @@
 # BinInfo ![.NET Core](https://github.com/gustavofrizzo/BinInfo/workflows/.NET%20Core/badge.svg?branch=master)
 
-BinInfo gets information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
+BinInfo gets information about Credit Card Issuers through [binlist.net](https://binlist.net/) public REST API.
 
 NuGet Package -> https://www.nuget.org/packages/BinInfo
 
-## About [binlist.net](http://binlist.net)
+## About [binlist.net](https://binlist.net/)
 
-[binlist.net](http://binlist.net) is a public web service for searching Issuer Identification Numbers (IIN).
+[binlist.net](https://binlist.net/) is a public web service for searching Issuer Identification Numbers (IIN).
 
 The first 6 digits of a credit card number are known as the Issuer Identification Number (IIN), previously known as Bank Identification Number (BIN). These identify the institution that issued the card to the card holder.
 
