@@ -11,13 +11,16 @@ namespace BinInfo.Models
     [DebuggerDisplay("Scheme: {Scheme}, Brand: {Brand}")]
     public class IssuerInformation
     {
+        /// <summary>
+        /// Details about the card number such as Length
+        /// and Luhn check is applicable. 
+        /// </summary>
         [DataMember(Name = "number")]
         public CardNumberInformation Number { get; set; }
 
         /// <summary>
         /// Card scheme. (i.e. Categories like
-        /// Standard, Classic, Platinum, Premier
-        /// and so on.)
+        /// Standard, Classic, Platinum, Premier and so on.)
         /// </summary>
         [DataMember(Name = "scheme")]
         public string Scheme { get; set; }
@@ -39,19 +42,23 @@ namespace BinInfo.Models
         /// Is a prepaid card type
         /// </summary>
         [DataMember(Name = "prepaid")]
-        public bool Prepaid { get; set; }
+        public bool? Prepaid { get; set; }
 
         /// <summary>
-        /// Details about the cards registered origin,
-        /// including location, country, currency ...
+        /// Details about the cards registered origin, 
+        /// including location, country, currency...
         /// </summary>
-        [DataMember(Name="country")]
+        [DataMember(Name = "country")]
         public CardOriginInformation Country { get; set; }
 
         /// <summary>
         /// Details about the bank who issued the card
         /// </summary>
-        [DataMember(Name="bank")] 
+        [DataMember(Name = "bank")]
         public BankInformation Bank { get; set; }
+
+        [JsonIgnore]
+        [IgnoreDataMember]
+        public string RawJson { get; set; }
     }
 }

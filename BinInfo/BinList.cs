@@ -75,6 +75,8 @@ namespace BinInfo
             };
 
             var ret = JsonSerializer.Deserialize<IssuerInformation>(json, options);
+            ret.RawJson = json;
+
             return ret;
         }
 

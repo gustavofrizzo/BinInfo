@@ -23,9 +23,9 @@ namespace BinInfo.Models
         public string Currency { get; set; }
 
         [DataMember(Name = "latitude")]
-        public int Latitude { get; set; }
+        public int? Latitude { get; set; }
 
         [DataMember(Name = "longitude")]
-        public int Longitude { get; set; }
+        public int? Longitude { get; set; }
     }
 }

@@ -43,6 +43,48 @@ namespace BinInfo.Tests
         }
 
         [Fact]
+        public void Find_BinList_4845_Test()
+        {
+            IssuerInformation info = BinList.Find("4845");
+
+            Assert.Equal("visa", info.Scheme);
+            Assert.Null(info.Country);
+            Assert.Null(info.Bank);
+            Assert.Null(info.Prepaid);
+            Assert.Null(info.Brand);
+            Assert.Equal(16, info.Number.Length);
+            Assert.Null(info.Number.Luhn);
+        }
+
+        [Fact]
+        public void Find_BinList_5485_Test()
+        {
+            IssuerInformation info = BinList.Find("5485");
+
+            Assert.Equal("mastercard", info.Scheme);
+            Assert.Null(info.Country);
+            Assert.Null(info.Bank);
+            Assert.True(info.Prepaid);
+            Assert.Null(info.Brand);
+            Assert.Null(info.Number.Length);
+            Assert.Null(info.Number.Luhn);
+        }
+
+        [Fact]
+        public void Find_BinList_55516_Test()
+        {
+            IssuerInformation info = BinList.Find("55516");
+
+            Assert.Equal("mastercard", info.Scheme);
+            Assert.Equal("credit", info.CardType);
+            Assert.Equal("Purchasing", info.Brand);
+            Assert.Null(info.Country);
+            Assert.Null(info.Bank);
+            Assert.Null(info.Prepaid);
+            Assert.Null(info.Number.Luhn);
+        }
+
+        [Fact]
         public void ArgumentNullException_BinList_Test()
         {
             Assert.Throws<ArgumentNullException>(() => BinList.Find(null));
