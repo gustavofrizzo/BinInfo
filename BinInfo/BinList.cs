@@ -24,35 +24,22 @@ namespace BinInfo
         /// <returns>IssuerInformation</returns>
         public static IssuerInformation Find(string bin)
         {
-            if (bin == null)
-                throw new ArgumentNullException("bin");
+            BinSanityCheck(bin);
 
-            if (!bin.Trim().All(c => char.IsNumber(c)) || string.IsNullOrWhiteSpace(bin))
-                throw new ArgumentException("Make sure to enter a valid BIN/IIN number.");
-
-            using (WebClient web = new WebClient())
+            try
             {
-                try
+                using (var web = new WebClient())
                 {
-                    string json = web.DownloadString(BaseUrl + bin);
-
-                    DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
-
-                    using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
-                    {
-                        var issuerInfo = (IssuerInformation)serializer.ReadObject(stream);
-                        return issuerInfo;
-                    }
-                }
-                catch (WebException ex)
-                {
-                    string addInfo = $"No results for {bin}. Make sure you enter a valid BIN/IIN number. --- ";
-                    throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
+                    var json = web.DownloadString($"{BaseUrl}{bin}");
+                    return GetIssuerInformation(json);
                 }
             }
+            catch (WebException ex)
+            {
+                var addInfo = $"No results for {bin}. Make sure you enter a valid BIN/IIN number. --- ";
+                throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
+            }
         }
-
-#if !NET40
 
         /// <summary>
         /// binlist.net is a public web service for searching Issuer Identification Numbers (IIN).
@@ -65,34 +52,40 @@ namespace BinInfo
         /// <returns>IssuerInformation</returns>
         public async static Task<IssuerInformation> FindAsync(string bin)
         {
+            BinSanityCheck(bin);
+
+            try
+            {
+                using (var web = new WebClient())
+                {
+                    var json = await web.DownloadStringTaskAsync($"{BaseUrl}{bin}");
+                    return GetIssuerInformation(json);
+                }
+            }
+            catch (WebException ex)
+            {
+                var addInfo = $"No results for {bin}. Make sure you enter a valid BIN/IIN number. --- ";
+                throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
+            }
+        }
+
+        private static IssuerInformation GetIssuerInformation(string json)
+        {
+            using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
+            {
+                var serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
+                var issuerInfo = (IssuerInformation)serializer.ReadObject(stream);
+                return issuerInfo;
+            }
+        }
+
+        private static void BinSanityCheck(string bin)
+        {
             if (bin == null)
                 throw new ArgumentNullException("bin");
 
             if (!bin.Trim().All(c => char.IsNumber(c)) || string.IsNullOrWhiteSpace(bin))
                 throw new ArgumentException("Make sure to enter a valid BIN/IIN number.");
-
-            using (WebClient web = new WebClient())
-            {
-                try
-                {
-                    string json = await web.DownloadStringTaskAsync(BaseUrl + bin);
-
-                    DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
-
-                    using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
-                    {
-                        var issuerInfo = (IssuerInformation)serializer.ReadObject(stream);
-                        return issuerInfo;
-                    }
-                }
-                catch (WebException ex)
-                {
-                    string addInfo = $"No results for {bin}. Make sure you enter a valid BIN/IIN number. --- ";
-                    throw new WebException(addInfo + ex.Message, ex, ex.Status, ex.Response);
-                }
-            }
         }
-#endif
-
     }
 }
