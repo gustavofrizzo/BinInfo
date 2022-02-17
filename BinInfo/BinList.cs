@@ -1,9 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Net;
-using System.Runtime.Serialization.Json;
-using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using BinInfo.Models;
 
@@ -71,12 +69,13 @@ namespace BinInfo
 
         private static IssuerInformation GetIssuerInformation(string json)
         {
-            using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
+            var options = new JsonSerializerOptions
             {
-                var serializer = new DataContractJsonSerializer(typeof(IssuerInformation));
-                var issuerInfo = (IssuerInformation)serializer.ReadObject(stream);
-                return issuerInfo;
-            }
+                PropertyNameCaseInsensitive = true
+            };
+
+            var ret = JsonSerializer.Deserialize<IssuerInformation>(json, options);
+            return ret;
         }
 
         private static void BinSanityCheck(string bin)

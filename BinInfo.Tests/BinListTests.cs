@@ -16,8 +16,8 @@ namespace BinInfo.Tests
             Assert.Equal("Ireland", info.Country.Name);
             Assert.Equal("BANK OF IRELAND", info.Bank.Name);
             Assert.Equal("debit", info.CardType);
-            Assert.Equal("53", info.Country.Latitude);
-            Assert.Equal("-8", info.Country.Longitude);
+            Assert.Equal(53, info.Country.Latitude);
+            Assert.Equal(-8, info.Country.Longitude);
             Assert.Equal("Traditional", info.Brand);
             Assert.Equal(16, info.Number.Length);
             Assert.True(info.Number.Luhn);
@@ -34,8 +34,8 @@ namespace BinInfo.Tests
             Assert.Equal("Ireland", info.Country.Name);
             Assert.Equal("BANK OF IRELAND", info.Bank.Name);
             Assert.Equal("debit", info.CardType);
-            Assert.Equal("53", info.Country.Latitude);
-            Assert.Equal("-8", info.Country.Longitude);
+            Assert.Equal(53, info.Country.Latitude);
+            Assert.Equal(-8, info.Country.Longitude);
             Assert.Equal("Traditional", info.Brand);
             Assert.Equal(16, info.Number.Length);
             Assert.True(info.Number.Luhn);
@@ -88,8 +88,8 @@ namespace BinInfo.Tests
             Assert.Equal("United States of America", info.Country.Name);
             Assert.Equal("TWINSTAR C.U.", info.Bank.Name);
             Assert.Equal("credit", info.CardType);
-            Assert.Equal("38", info.Country.Latitude);
-            Assert.Equal("-97", info.Country.Longitude);
+            Assert.Equal(38, info.Country.Latitude);
+            Assert.Equal(-97, info.Country.Longitude);
             Assert.Equal("Traditional", info.Brand);
             Assert.Equal(16, info.Number.Length);
             Assert.Null(info.Number.Luhn);

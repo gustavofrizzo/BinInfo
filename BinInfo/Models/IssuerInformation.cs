@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BinInfo.Models
 {
@@ -25,6 +26,7 @@ namespace BinInfo.Models
         /// Card type. (i.e. Credit / Debit)
         /// </summary>
         [DataMember(Name = "type")]
+        [JsonPropertyName("type")]
         public string CardType { get; set; }
 
         /// <summary>
