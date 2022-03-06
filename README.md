@@ -4,9 +4,9 @@ BinInfo is an API wrapper that retrieves information about Credit Card Issuers t
 
 NuGet Package -> https://www.nuget.org/packages/BinInfo
 
-## About [binlist.net](http://binlist.net)
+## About [binlist.net](https://binlist.net/)
 
-[binlist.net](http://binlist.net) is a public web service for searching Issuer Identification Numbers (IIN).
+[binlist.net](https://binlist.net/) is a public web service for searching Issuer Identification Numbers (IIN).
 
 The first 6 digits of a credit card number are known as the Issuer Identification Number (IIN), previously known as Bank Identification Number (BIN). These identify the institution that issued the card to the card holder.
 
