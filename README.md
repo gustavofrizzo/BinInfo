@@ -1,6 +1,6 @@
 # BinInfo [![Build & Tests](https://github.com/gustavofrizzo/BinInfo/actions/workflows/dotnet-build-and-tests.yml/badge.svg)](https://github.com/gustavofrizzo/BinInfo/actions/workflows/dotnet-build-and-tests.yml)
 
-BinInfo gets information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
+BinInfo is an API wrapper that retrieves information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
 
 NuGet Package -> https://www.nuget.org/packages/BinInfo
 
