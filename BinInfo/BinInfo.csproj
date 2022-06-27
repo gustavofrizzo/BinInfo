@@ -6,35 +6,30 @@
     <RootNamespace>BinInfo</RootNamespace>
     <PackageId>BinInfo</PackageId>
     <Product>BinInfo</Product>
-    <Version>2.0.4</Version>
-    <FileVersion>2.0.4.0</FileVersion>
-    <AssemblyVersion>2.0.4.0</AssemblyVersion>
+    <Version>3.0.0</Version>
+    <FileVersion>3.0.0.0</FileVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <title>BinInfo</title>
-    <Copyright>Copyright © Gustavo Frizzo 2020</Copyright>
-    <Description>
-BinInfo gets information about Credit Card Issuers through binlist.net public REST API.
-
-binlist.net is a public web service for searching Issuer Identification Numbers (IIN).
-
-The first 6 digits of a credit card number are known as the Issuer Identification Number (IIN), previously known as Bank Identification Number (BIN). These identify the institution that issued the card to the card holder.
-
-This webservice has an internal database with IIN/BIN information, which is queried via the Rest API. There's no magic or tricky calculations, it's just a database. And although the database is very accurate, don't expect it to be perfect.
-    </Description>
-    <summary>
-BinInfo gets information about Credit Card Issuers through binlist.net public REST API.
-    </summary>
+    <Copyright>Copyright © Gustavo Frizzo 2022</Copyright>
+    <Description>BinInfo is an API wrapper that retrieves information about Credit Card Issuers through binlist.net public REST API.</Description>
+    <summary>BinInfo is an API wrapper that retrieves information about Credit Card Issuers through binlist.net public REST API.</summary>
     <Company />
-    <Authors>Gustavo Frizzo and contributors</Authors>
+    <Authors>Gustavo Frizzo and Contributors</Authors>
     <owners>gustavo.frizzo</owners>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/gustavofrizzo/BinInfo</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gustavofrizzo/BinInfo</RepositoryUrl>
     <PackageTags>binlist.net Credit Card Issuers BIN IIN Bank Identification Number Issuer Numbers</PackageTags>
-    <PackageReleaseNotes>
--- Adding support to .NET Standard 2.0
--- Adding BinList.FindAsync(string bin) method.
--- Now the property IssuerInformation.Number.Luhn is nullable.
-    </PackageReleaseNotes>
+    <PackageReleaseNotes>Removed support for old .NET 4 and 4.5 Frameworks.</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
