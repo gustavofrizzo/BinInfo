@@ -14,13 +14,13 @@ namespace BinInfo.Models
         /// Length of the card number
         /// </summary>
         [DataMember(Name = "length")]
-        public int Length { get; set; }
+        public int? Length { get; set; }
 
         /// <summary>
         /// Whether card was tested successfully
         /// against the Luhn algorithm 
         /// </summary>
-        [DataMember (Name = "luhn")]
+        [DataMember(Name = "luhn")]
         public bool? Luhn { get; set; }
     }
 }
