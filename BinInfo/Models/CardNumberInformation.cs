@@ -20,7 +20,7 @@ namespace BinInfo.Models
         /// Whether card was tested successfully
         /// against the Luhn algorithm 
         /// </summary>
-        [DataMember (Name = "luhn")]
+        [DataMember(Name = "luhn")]
         public bool? Luhn { get; set; }
     }
 }

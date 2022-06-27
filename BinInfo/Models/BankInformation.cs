@@ -13,7 +13,7 @@ namespace BinInfo.Models
         [DataMember(Name = "name")]
         public string Name { get; set; }
 
-        [DataMember(Name="url")]
+        [DataMember(Name = "url")]
         public string Url { get; set; }
 
         [DataMember(Name = "phone")]

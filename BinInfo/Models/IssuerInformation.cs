@@ -43,13 +43,13 @@ namespace BinInfo.Models
         /// Details about the cards registered origin,
         /// including location, country, currency ...
         /// </summary>
-        [DataMember(Name="country")]
+        [DataMember(Name = "country")]
         public CardOriginInformation Country { get; set; }
 
         /// <summary>
         /// Details about the bank who issued the card
         /// </summary>
-        [DataMember(Name="bank")] 
+        [DataMember(Name = "bank")]
         public BankInformation Bank { get; set; }
     }
 }
