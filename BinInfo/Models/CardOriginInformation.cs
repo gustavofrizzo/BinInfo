@@ -8,7 +8,7 @@ namespace BinInfo.Models
     public class CardOriginInformation
     {
         [DataMember(Name = "numeric")]
-        public int Numeric { get; set; }
+        public string Numeric { get; set; }
 
         [DataMember(Name = "alpha2")]
         public string Alpha2 { get; set; }
@@ -23,9 +23,9 @@ namespace BinInfo.Models
         public string Currency { get; set; }
 
         [DataMember(Name = "latitude")]
-        public string Latitude { get; set; }
+        public int Latitude { get; set; }
 
         [DataMember(Name = "longitude")]
-        public string Longitude { get; set; }
+        public int Longitude { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace BinInfo.Models
         /// Length of the card number
         /// </summary>
         [DataMember(Name = "length")]
-        public int Length { get; set; }
+        public int? Length { get; set; }
 
         /// <summary>
         /// Whether card was tested successfully

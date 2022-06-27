@@ -37,7 +37,7 @@ namespace BinInfo.Models
         /// Is a prepaid card type
         /// </summary>
         [DataMember(Name = "prepaid")]
-        public bool Prepaid { get; set; }
+        public bool? Prepaid { get; set; }
 
         /// <summary>
         /// Details about the cards registered origin,
