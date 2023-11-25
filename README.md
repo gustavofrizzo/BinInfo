@@ -1,4 +1,4 @@
-# BinInfo [![Build & Tests](https://github.com/gustavofrizzo/BinInfo/actions/workflows/dotnet-build-and-tests.yml/badge.svg)](https://github.com/gustavofrizzo/BinInfo/actions/workflows/dotnet-build-and-tests.yml)
+# BinInfo [![Build & Tests](https://github.com/gustavofrizzo/BinInfo/actions/workflows/dotnet-build-and-tests.yml/badge.svg?branch=master)](https://github.com/gustavofrizzo/BinInfo/actions/workflows/dotnet-build-and-tests.yml)
 
 BinInfo is an API wrapper that retrieves information about Credit Card Issuers through [binlist.net](http://binlist.net) public REST API.
 
